@@ -7,7 +7,8 @@
     android:layout_height="match_parent"
     tools:context=".View.DetailsPetActivity"
     android:orientation="vertical"
-    android:padding="29dp">
+    android:padding="29dp"
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/tvNamePet"
@@ -17,6 +18,8 @@
         android:textColor="@color/black"
         android:textSize="30dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:fontFamily="sans-serif-black"
          />
 
     <ImageView
@@ -62,11 +65,12 @@
     
     <Button
         android:id="@+id/btnGoList"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="Go to list"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="80dp"
+        android:drawableStart="@drawable/back"/>
 
 
 
