@@ -28,7 +28,7 @@ class PetViewModel : ViewModel() {
     private val _statusMessage = MutableLiveData<String>()
     val statusMessage: LiveData<String> get() = _statusMessage
 
-    private val _filteredPets = MutableLiveData<List<Pet>>()
+
 
 
     fun storePet(type: String, name: String, age: Int, breed: String, image: File) {
@@ -60,7 +60,7 @@ class PetViewModel : ViewModel() {
                     Log.e("ERROR LISTA VACIO", "LA LISTA DE PETS ESTA VACIA")
                 }
             } catch (e: Exception) {
-                // Manejar el error adecuadamente (mostrar un mensaje al usuario, loggear el error, etc.)
+
                 e.printStackTrace()
             }
         }

@@ -46,7 +46,7 @@ class AddPetActivity : AppCompatActivity() {
         val items = listOf("dog", "cat", "other")
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, items)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        // Aplicar el adaptador al Spinner
+
         binding.spTypePet.adapter = adapter
         binding.spTypePet.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?,

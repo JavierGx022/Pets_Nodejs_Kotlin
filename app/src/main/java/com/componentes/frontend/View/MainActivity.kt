@@ -2,6 +2,7 @@ package com.componentes.frontend.View
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
@@ -28,10 +29,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         initRecycler()
 
-        val items = listOf("Type", "Breed", "Age")
+        val items = listOf("type", "breed", "age")
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, items)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        // Aplicar el adaptador al Spinner
+
         binding.spOrderby.adapter = adapter
 
         binding.spOrderby.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
@@ -50,6 +51,7 @@ class MainActivity : AppCompatActivity() {
         binding.btnFilter.setOnClickListener {
             var name=binding.txtFindPet.text.toString()
             var field= fieldS
+            Log.e("FILTRO", "field: $field name: $name")
             petViewModel.filterPets(name, field)
         }
 

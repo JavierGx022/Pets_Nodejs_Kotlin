@@ -22,9 +22,9 @@ class DetailsPetActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.tvNamePet.text= intent.getStringExtra("name")
-        binding.tvAgePet.text= intent.getStringExtra("age")
-        binding.tvTypePet.text= intent.getStringExtra("type")
-        binding.tvBreedPet.text= intent.getStringExtra("breed")
+        binding.tvAgePet.text= "Age: "+intent.getIntExtra("age",0)+ " (months)"
+        binding.tvTypePet.text= "Type: "+intent.getStringExtra("type")
+        binding.tvBreedPet.text= "Breed: "+intent.getStringExtra("breed")
 
         val imageUrl = intent.getStringExtra("image").toString()
         Log.e("URL IMG", "la url es: ${imageUrl}")
